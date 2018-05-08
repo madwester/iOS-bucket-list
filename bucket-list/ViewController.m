@@ -14,6 +14,7 @@
 //delegate = when we click on something in the list
 @interface ViewController () <UITableViewDataSource, UITabBarDelegate, AddActivityViewCrontrollerDelegate>
 
+//creating an array so we can add new activities into it
 @property (nonatomic, strong) NSMutableArray *activities;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -37,7 +38,6 @@
     return self.activities.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = @"ListTableViewCell";
     ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -49,15 +49,19 @@
     cell.titleLabel.text = activityText;
     return cell;
 }
+
+//is gonna give me the segue way for the identifier we are given
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     //getting an instance
     UINavigationController *nav = segue.destinationViewController;
     AddActivityViewController *addActivityVC = nav.viewControllers[0];
     addActivityVC.delegate = self;
 }
+
 -(void)savedNewActivity:(NSString *)activityText {
     [self.activities addObject:activityText];
     //reloading the table
     [self.tableView reloadData];
 }
+
 @end

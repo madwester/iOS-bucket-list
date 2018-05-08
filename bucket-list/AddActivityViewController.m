@@ -35,11 +35,12 @@
 */
 
 - (IBAction)cancel:(id)sender {
-    [self.delegate savedNewActivity:self.textField.text];
+    //scroll up effect
     [self dismissViewControllerAnimated:(YES) completion:nil];
 }
 //get data and pass back to populate it
 - (IBAction)save:(id)sender {
+    [self.delegate savedNewActivity:self.textField.text];
     [self dismissViewControllerAnimated:(YES) completion:nil];
 }
 @end
