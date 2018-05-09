@@ -12,7 +12,6 @@
 @interface ViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *activities;
-@property (strong, nonatomic) NSMutableArray *devices;
 
 @end
 

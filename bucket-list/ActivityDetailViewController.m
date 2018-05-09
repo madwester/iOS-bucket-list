@@ -41,10 +41,10 @@
 - (IBAction)save:(id)sender {
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Device" inManagedObjectContext:context];
+    NSManagedObject *newActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:context];
     
-    [newDevice setValue:titleTextField.text forKey:@"name"];
-    [newDevice setValue:descTextField.text forKey:@"desc"];
+    [newActivity setValue:titleTextField.text forKey:@"name"];
+    [newActivity setValue:descTextField.text forKey:@"desc"];
     
     NSError *error = nil;
     if(![context save:&error]){
