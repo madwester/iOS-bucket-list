@@ -15,8 +15,8 @@
 		ED4358542097E2BD0025543F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4358532097E2BD0025543F /* main.m */; };
 		ED43585E2097E2BD0025543F /* bucket_listTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED43585D2097E2BD0025543F /* bucket_listTests.m */; };
 		ED4358692097E2BD0025543F /* bucket_listUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4358682097E2BD0025543F /* bucket_listUITests.m */; };
-		ED481F4920A129A70049F14E /* AddActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED481F4820A129A70049F14E /* AddActivityViewController.m */; };
 		ED870B2920A022BB004D18E9 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED870B2820A022BB004D18E9 /* ListTableViewCell.m */; };
+		ED9A384D20A2AFC000EA851D /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		ED4358642097E2BD0025543F /* bucket-listUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bucket-listUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4358682097E2BD0025543F /* bucket_listUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bucket_listUITests.m; sourceTree = "<group>"; };
 		ED43586A2097E2BD0025543F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED481F4720A129A70049F14E /* AddActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddActivityViewController.h; sourceTree = "<group>"; };
-		ED481F4820A129A70049F14E /* AddActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddActivityViewController.m; sourceTree = "<group>"; };
 		ED870B2720A022BB004D18E9 /* ListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
 		ED870B2820A022BB004D18E9 /* ListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		ED9A384B20A2AFC000EA851D /* ActivityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
+		ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +118,8 @@
 				ED4358532097E2BD0025543F /* main.m */,
 				ED870B2720A022BB004D18E9 /* ListTableViewCell.h */,
 				ED870B2820A022BB004D18E9 /* ListTableViewCell.m */,
-				ED481F4720A129A70049F14E /* AddActivityViewController.h */,
-				ED481F4820A129A70049F14E /* AddActivityViewController.m */,
+				ED9A384B20A2AFC000EA851D /* ActivityDetailViewController.h */,
+				ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */,
 			);
 			path = "bucket-list";
 			sourceTree = "<group>";
@@ -272,10 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9A384D20A2AFC000EA851D /* ActivityDetailViewController.m in Sources */,
 				ED4358492097E2BB0025543F /* ViewController.m in Sources */,
 				ED870B2920A022BB004D18E9 /* ListTableViewCell.m in Sources */,
 				ED4358542097E2BD0025543F /* main.m in Sources */,
-				ED481F4920A129A70049F14E /* AddActivityViewController.m in Sources */,
 				ED4358462097E2BB0025543F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
