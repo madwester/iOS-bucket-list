@@ -55,6 +55,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     NSManagedObject *activity = [activities objectAtIndex:indexPath.row];
+    //setting the text to show in list
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", [activity valueForKey:@"listname"]]];
     return cell;
 }

@@ -15,11 +15,22 @@
 
 @implementation ActivityDetailViewController
 
-@synthesize titleTextField, descTextField;
+@synthesize titleTextField, descTextView;
 
+//only loads one
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //style descTextView
+    [[titleTextField layer] setCornerRadius:5];
+    [[descTextView layer] setCornerRadius:5];
+    
+}
+
+//loads more than once, example if I need placeholders
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +55,7 @@
     NSManagedObject *newActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activities" inManagedObjectContext:context];
     
     [newActivity setValue:titleTextField.text forKey:@"listname"];
-    [newActivity setValue:descTextField.text forKey:@"desc"];
+    [newActivity setValue:descTextView.text forKey:@"desc"];
     
     NSError *error = nil;
     if(![context save:&error]){

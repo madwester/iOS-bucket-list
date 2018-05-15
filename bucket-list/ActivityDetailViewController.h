@@ -13,7 +13,7 @@
 
 //initializing textfields and buttons
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-@property (weak, nonatomic) IBOutlet UITextField *descTextField;
+@property (weak, nonatomic) IBOutlet UITextView *descTextView;
 - (IBAction)save:(id)sender;
 
 @end
