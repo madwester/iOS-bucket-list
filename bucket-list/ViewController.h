@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 @import CoreData;
 
 @interface ViewController : UITableViewController
 
+@property (nonatomic, strong) AppDelegate *appDelegate;
 @property (nonatomic, strong) NSMutableArray *activities;
 
 @end

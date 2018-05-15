@@ -16,6 +16,7 @@
 		ED43585E2097E2BD0025543F /* bucket_listTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED43585D2097E2BD0025543F /* bucket_listTests.m */; };
 		ED4358692097E2BD0025543F /* bucket_listUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4358682097E2BD0025543F /* bucket_listUITests.m */; };
 		ED9A384D20A2AFC000EA851D /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */; };
+		EDF64BBD20AA61330080E276 /* MyData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF64BBB20AA61330080E276 /* MyData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		ED43586A2097E2BD0025543F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED9A384B20A2AFC000EA851D /* ActivityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
 		ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
+		EDF64BBC20AA61330080E276 /* MyData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		ED4358432097E2BB0025543F /* bucket-list */ = {
 			isa = PBXGroup;
 			children = (
+				EDF64BBB20AA61330080E276 /* MyData.xcdatamodeld */,
 				ED4358442097E2BB0025543F /* AppDelegate.h */,
 				ED4358452097E2BB0025543F /* AppDelegate.m */,
 				ED4358472097E2BB0025543F /* ViewController.h */,
@@ -271,6 +274,7 @@
 				ED4358492097E2BB0025543F /* ViewController.m in Sources */,
 				ED4358542097E2BD0025543F /* main.m in Sources */,
 				ED4358462097E2BB0025543F /* AppDelegate.m in Sources */,
+				EDF64BBD20AA61330080E276 /* MyData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +587,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EDF64BBB20AA61330080E276 /* MyData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EDF64BBC20AA61330080E276 /* MyData.xcdatamodel */,
+			);
+			currentVersion = EDF64BBC20AA61330080E276 /* MyData.xcdatamodel */;
+			path = MyData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ED4358392097E2BB0025543F /* Project object */;
 }

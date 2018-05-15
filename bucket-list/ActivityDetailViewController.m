@@ -41,9 +41,9 @@
 - (IBAction)save:(id)sender {
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    NSManagedObject *newActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activity" inManagedObjectContext:context];
+    NSManagedObject *newActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activities" inManagedObjectContext:context];
     
-    [newActivity setValue:titleTextField.text forKey:@"name"];
+    [newActivity setValue:titleTextField.text forKey:@"listname"];
     [newActivity setValue:descTextField.text forKey:@"desc"];
     
     NSError *error = nil;
