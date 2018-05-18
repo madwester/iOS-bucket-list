@@ -18,7 +18,8 @@
 @synthesize titleTextField, descTextView;
 
 //only loads one
-- (void)viewDidLoad {
+- (void)viewDidLoad{
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
@@ -26,6 +27,8 @@
     [[titleTextField layer] setCornerRadius:5];
     [[descTextView layer] setCornerRadius:5];
     
+    //hide tab bar 
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 //loads more than once, example if I need placeholders

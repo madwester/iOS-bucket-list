@@ -25,6 +25,12 @@
     self.navigationItem.title = @"Bucket List";
     
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    //show tab bar
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +66,10 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showDetail" sender:self];
+}
+
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];
@@ -68,4 +78,10 @@
     }
     return context;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //pass data, to show correct activity
+}
+
+
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED10E15C20AE6CD4008B91F9 /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED10E15B20AE6CD4008B91F9 /* CustomTextView.m */; };
 		ED4358462097E2BB0025543F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4358452097E2BB0025543F /* AppDelegate.m */; };
 		ED4358492097E2BB0025543F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4358482097E2BB0025543F /* ViewController.m */; };
 		ED43584C2097E2BC0025543F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED43584A2097E2BC0025543F /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		ED4358542097E2BD0025543F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4358532097E2BD0025543F /* main.m */; };
 		ED43585E2097E2BD0025543F /* bucket_listTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED43585D2097E2BD0025543F /* bucket_listTests.m */; };
 		ED4358692097E2BD0025543F /* bucket_listUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4358682097E2BD0025543F /* bucket_listUITests.m */; };
+		ED671CED20AE9B300076ABAB /* PlannedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED671CEC20AE9B300076ABAB /* PlannedTableViewController.m */; };
+		ED671CF020AE9B620076ABAB /* CompletedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED671CEF20AE9B620076ABAB /* CompletedTableViewController.m */; };
 		ED9A384D20A2AFC000EA851D /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */; };
 		EDF64BBD20AA61330080E276 /* MyData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF64BBB20AA61330080E276 /* MyData.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -37,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED10E15A20AE6CD4008B91F9 /* CustomTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTextView.h; sourceTree = "<group>"; };
+		ED10E15B20AE6CD4008B91F9 /* CustomTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTextView.m; sourceTree = "<group>"; };
 		ED4358412097E2BB0025543F /* bucket-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bucket-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4358442097E2BB0025543F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ED4358452097E2BB0025543F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +58,10 @@
 		ED4358642097E2BD0025543F /* bucket-listUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bucket-listUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4358682097E2BD0025543F /* bucket_listUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bucket_listUITests.m; sourceTree = "<group>"; };
 		ED43586A2097E2BD0025543F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED671CEB20AE9B300076ABAB /* PlannedTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlannedTableViewController.h; sourceTree = "<group>"; };
+		ED671CEC20AE9B300076ABAB /* PlannedTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlannedTableViewController.m; sourceTree = "<group>"; };
+		ED671CEE20AE9B620076ABAB /* CompletedTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompletedTableViewController.h; sourceTree = "<group>"; };
+		ED671CEF20AE9B620076ABAB /* CompletedTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompletedTableViewController.m; sourceTree = "<group>"; };
 		ED9A384B20A2AFC000EA851D /* ActivityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
 		ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
 		EDF64BBC20AA61330080E276 /* MyData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyData.xcdatamodel; sourceTree = "<group>"; };
@@ -106,6 +115,7 @@
 		ED4358432097E2BB0025543F /* bucket-list */ = {
 			isa = PBXGroup;
 			children = (
+				ED671CF120AE9B6D0076ABAB /* Controllers */,
 				EDF64BBB20AA61330080E276 /* MyData.xcdatamodeld */,
 				ED4358442097E2BB0025543F /* AppDelegate.h */,
 				ED4358452097E2BB0025543F /* AppDelegate.m */,
@@ -116,8 +126,8 @@
 				ED43584F2097E2BD0025543F /* LaunchScreen.storyboard */,
 				ED4358522097E2BD0025543F /* Info.plist */,
 				ED4358532097E2BD0025543F /* main.m */,
-				ED9A384B20A2AFC000EA851D /* ActivityDetailViewController.h */,
-				ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */,
+				ED10E15A20AE6CD4008B91F9 /* CustomTextView.h */,
+				ED10E15B20AE6CD4008B91F9 /* CustomTextView.m */,
 			);
 			path = "bucket-list";
 			sourceTree = "<group>";
@@ -138,6 +148,19 @@
 				ED43586A2097E2BD0025543F /* Info.plist */,
 			);
 			path = "bucket-listUITests";
+			sourceTree = "<group>";
+		};
+		ED671CF120AE9B6D0076ABAB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED671CEB20AE9B300076ABAB /* PlannedTableViewController.h */,
+				ED671CEC20AE9B300076ABAB /* PlannedTableViewController.m */,
+				ED671CEE20AE9B620076ABAB /* CompletedTableViewController.h */,
+				ED671CEF20AE9B620076ABAB /* CompletedTableViewController.m */,
+				ED9A384B20A2AFC000EA851D /* ActivityDetailViewController.h */,
+				ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +295,10 @@
 			files = (
 				ED9A384D20A2AFC000EA851D /* ActivityDetailViewController.m in Sources */,
 				ED4358492097E2BB0025543F /* ViewController.m in Sources */,
+				ED10E15C20AE6CD4008B91F9 /* CustomTextView.m in Sources */,
 				ED4358542097E2BD0025543F /* main.m in Sources */,
+				ED671CED20AE9B300076ABAB /* PlannedTableViewController.m in Sources */,
+				ED671CF020AE9B620076ABAB /* CompletedTableViewController.m in Sources */,
 				ED4358462097E2BB0025543F /* AppDelegate.m in Sources */,
 				EDF64BBD20AA61330080E276 /* MyData.xcdatamodeld in Sources */,
 			);
