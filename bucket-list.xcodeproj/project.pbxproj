@@ -21,6 +21,7 @@
 		ED671CF820AFF7450076ABAB /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = ED671CF620AFF7440076ABAB /* check.png */; };
 		ED671CFB20AFF8380076ABAB /* list2.png in Resources */ = {isa = PBXBuildFile; fileRef = ED671CFA20AFF8380076ABAB /* list2.png */; };
 		ED671CFE20B160A90076ABAB /* ShowActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED671CFD20B160A90076ABAB /* ShowActivityViewController.m */; };
+		ED671D0020B1702B0076ABAB /* check2.png in Resources */ = {isa = PBXBuildFile; fileRef = ED671CFF20B1702B0076ABAB /* check2.png */; };
 		ED9A384D20A2AFC000EA851D /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */; };
 		EDF64BBD20AA61330080E276 /* MyData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF64BBB20AA61330080E276 /* MyData.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		ED671CFA20AFF8380076ABAB /* list2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list2.png; sourceTree = "<group>"; };
 		ED671CFC20B160A90076ABAB /* ShowActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowActivityViewController.h; sourceTree = "<group>"; };
 		ED671CFD20B160A90076ABAB /* ShowActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowActivityViewController.m; sourceTree = "<group>"; };
+		ED671CFF20B1702B0076ABAB /* check2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check2.png; sourceTree = "<group>"; };
 		ED9A384B20A2AFC000EA851D /* ActivityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
 		ED9A384C20A2AFC000EA851D /* ActivityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
 		EDF64BBC20AA61330080E276 /* MyData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyData.xcdatamodel; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				ED4358482097E2BB0025543F /* ViewController.m */,
 				ED43584A2097E2BC0025543F /* Main.storyboard */,
 				ED43584D2097E2BD0025543F /* Assets.xcassets */,
+				ED671CFF20B1702B0076ABAB /* check2.png */,
 				ED671CF620AFF7440076ABAB /* check.png */,
 				ED671CFA20AFF8380076ABAB /* list2.png */,
 				ED43584F2097E2BD0025543F /* LaunchScreen.storyboard */,
@@ -282,6 +285,7 @@
 				ED43584E2097E2BD0025543F /* Assets.xcassets in Resources */,
 				ED671CF820AFF7450076ABAB /* check.png in Resources */,
 				ED43584C2097E2BC0025543F /* Main.storyboard in Resources */,
+				ED671D0020B1702B0076ABAB /* check2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "ShowActivityViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ShowActivityViewController ()
 
@@ -19,10 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //hide tab bar
+    self.tabBarController.tabBar.hidden = YES;
+    
     //setting paddings
-    titleTextView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
-    dateTextView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
-    descTextView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    //titleTextView.textContainerInset = UIEdgeInsetsMake(100, 10, 10, 100);
+    //dateTextView.textContainerInset = UIEdgeInsetsMake(10, 100, 100, 10);
+    //descTextView.textContainerInset = UIEdgeInsetsMake(100, 100, 100, 100);
+    
 }
 
 - (void)didReceiveMemoryWarning {
