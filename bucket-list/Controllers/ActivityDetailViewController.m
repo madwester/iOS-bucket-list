@@ -22,6 +22,8 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    descTextView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
     //style descTextView
     [[titleTextField layer] setCornerRadius:5];
@@ -29,6 +31,7 @@
     
     //hide tab bar 
     self.tabBarController.tabBar.hidden = YES;
+    
 }
 
 //loads more than once, example if I need placeholders
@@ -39,6 +42,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)barButtonCustomPressed: (UIBarButtonItem*)btn
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (NSManagedObjectContext *) managedObjectContext {
@@ -66,5 +74,8 @@
     }
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)backButton:(id)sender {
 }
 @end
