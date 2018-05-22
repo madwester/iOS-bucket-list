@@ -23,11 +23,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    descTextView.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10);
-    
-    //style descTextView
-    [[titleTextField layer] setCornerRadius:5];
-    [[descTextView layer] setCornerRadius:5];
     
     //hide tab bar 
     self.tabBarController.tabBar.hidden = YES;
@@ -35,6 +30,30 @@
     //setting the title
     self.navigationItem.title = @"Add New Activity";
     
+    //setting placeholder for description textview
+    self.descTextView.delegate = self;
+    descTextView.text = @"Description";
+    
+}
+
+//METHOD 1 OF 2 TO SET PLACEHOLDER
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"Description"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor blackColor]; //optional
+    }
+    [textView becomeFirstResponder];
+}
+
+//METHOD 2 OF 2 TO SET PLACEHOLDER
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"Description";
+        textView.textColor = [UIColor blackColor]; //optional
+    }
+    [textView resignFirstResponder];
 }
 
 //loads more than once, example if I need placeholders

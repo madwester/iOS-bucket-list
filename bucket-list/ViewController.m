@@ -65,11 +65,11 @@
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", [activity valueForKey:@"listname"]]];
     return cell;
 }
-
-
+/*
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
+*/
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
@@ -80,11 +80,19 @@
     return context;
 }
 
+#pragma mark - Segues
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //to do to pass data, to show correct activity
 
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSDate *activity = self.activities[indexPath.row];
+        [[segue destinationViewController] setDetailItem:activity];
+    }
+    
 }
-#pragma mark - Segues
+
 
 
 @end

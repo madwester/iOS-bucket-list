@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface ActivityDetailViewController : UIViewController 
+@interface ActivityDetailViewController : UIViewController <UITextViewDelegate>
 
 //initializing textfields and buttons
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
