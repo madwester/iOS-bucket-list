@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "ActivityDetailViewController.h"
+#import "ActivityDetailViewController.h" //edit activity page
+#import "ShowActivityViewController.h" //show acticity page
 
 
 @interface ViewController ()
@@ -22,10 +23,9 @@
     [super viewDidLoad];
     
     //setting the title of the home page
-    self.navigationItem.title = @"Bucket List";
+    self.navigationItem.title = @"Planned";
     
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -66,7 +66,8 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+ - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 
@@ -80,8 +81,10 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //pass data, to show correct activity
+    //to do to pass data, to show correct activity
+
 }
+#pragma mark - Segues
 
 
 @end

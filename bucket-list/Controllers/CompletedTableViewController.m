@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //setting the title of the home page
+    self.navigationItem.title = @"Completed";
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

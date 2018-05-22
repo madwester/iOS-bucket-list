@@ -17,16 +17,30 @@
 
 @synthesize titleTextView, dateTextView, descTextView;
 
+- (void)setDetailItem:(id)newDetailItem {
+    if (_detailItem != newDetailItem) {
+        _detailItem = newDetailItem;
+        
+        // Update the view.
+        [self configureView];
+    }
+}
+
+- (void)configureView {
+    // Update the user interface for the detail item.
+    if (self.detailItem) {
+        self.titleTextView.text = [self.detailItem title];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     //hide tab bar
     self.tabBarController.tabBar.hidden = YES;
     
-    //setting paddings
-    //titleTextView.textContainerInset = UIEdgeInsetsMake(100, 10, 10, 100);
-    //dateTextView.textContainerInset = UIEdgeInsetsMake(10, 100, 100, 10);
-    //descTextView.textContainerInset = UIEdgeInsetsMake(100, 100, 100, 100);
+    //setting the title of the home page
+    self.navigationItem.title = @"Placeholder title";
     
 }
 

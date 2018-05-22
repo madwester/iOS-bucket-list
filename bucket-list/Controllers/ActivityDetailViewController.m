@@ -32,6 +32,9 @@
     //hide tab bar 
     self.tabBarController.tabBar.hidden = YES;
     
+    //setting the title
+    self.navigationItem.title = @"Add New Activity";
+    
 }
 
 //loads more than once, example if I need placeholders

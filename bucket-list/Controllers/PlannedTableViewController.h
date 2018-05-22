@@ -10,4 +10,6 @@
 
 @interface PlannedTableViewController : UITableViewController
 
+//MIGHT NOT NEED THIS IF I USE VIEW CONTROLLER INSTEAD
+
 @end

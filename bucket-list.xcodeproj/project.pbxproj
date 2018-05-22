@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		ED10E15C20AE6CD4008B91F9 /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED10E15B20AE6CD4008B91F9 /* CustomTextView.m */; };
+		ED304BAF20B3922D009925FC /* AbrilFatface-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED304BAE20B3922D009925FC /* AbrilFatface-Regular.ttf */; };
+		ED304BB720B3A077009925FC /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = ED304BB620B3A077009925FC /* icon2.png */; };
+		ED304BB920B3A346009925FC /* logo-bl.png in Resources */ = {isa = PBXBuildFile; fileRef = ED304BB820B3A346009925FC /* logo-bl.png */; };
 		ED4358462097E2BB0025543F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4358452097E2BB0025543F /* AppDelegate.m */; };
 		ED4358492097E2BB0025543F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4358482097E2BB0025543F /* ViewController.m */; };
 		ED43584C2097E2BC0025543F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED43584A2097E2BC0025543F /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		ED10E15A20AE6CD4008B91F9 /* CustomTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTextView.h; sourceTree = "<group>"; };
 		ED10E15B20AE6CD4008B91F9 /* CustomTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTextView.m; sourceTree = "<group>"; };
+		ED304BAE20B3922D009925FC /* AbrilFatface-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AbrilFatface-Regular.ttf"; sourceTree = "<group>"; };
+		ED304BB620B3A077009925FC /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		ED304BB820B3A346009925FC /* logo-bl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-bl.png"; sourceTree = "<group>"; };
 		ED4358412097E2BB0025543F /* bucket-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bucket-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4358442097E2BB0025543F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ED4358452097E2BB0025543F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +107,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED304BBA20B3A427009925FC /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				ED304BAE20B3922D009925FC /* AbrilFatface-Regular.ttf */,
+				ED671CFF20B1702B0076ABAB /* check2.png */,
+				ED671CF620AFF7440076ABAB /* check.png */,
+				ED304BB620B3A077009925FC /* icon2.png */,
+				ED304BB820B3A346009925FC /* logo-bl.png */,
+				ED671CFA20AFF8380076ABAB /* list2.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		ED4358382097E2BB0025543F = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +143,7 @@
 		ED4358432097E2BB0025543F /* bucket-list */ = {
 			isa = PBXGroup;
 			children = (
+				ED304BBA20B3A427009925FC /* assets */,
 				ED671CF120AE9B6D0076ABAB /* Controllers */,
 				EDF64BBB20AA61330080E276 /* MyData.xcdatamodeld */,
 				ED4358442097E2BB0025543F /* AppDelegate.h */,
@@ -132,9 +152,6 @@
 				ED4358482097E2BB0025543F /* ViewController.m */,
 				ED43584A2097E2BC0025543F /* Main.storyboard */,
 				ED43584D2097E2BD0025543F /* Assets.xcassets */,
-				ED671CFF20B1702B0076ABAB /* check2.png */,
-				ED671CF620AFF7440076ABAB /* check.png */,
-				ED671CFA20AFF8380076ABAB /* list2.png */,
 				ED43584F2097E2BD0025543F /* LaunchScreen.storyboard */,
 				ED4358522097E2BD0025543F /* Info.plist */,
 				ED4358532097E2BD0025543F /* main.m */,
@@ -280,12 +297,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED304BAF20B3922D009925FC /* AbrilFatface-Regular.ttf in Resources */,
 				ED4358512097E2BD0025543F /* LaunchScreen.storyboard in Resources */,
 				ED671CFB20AFF8380076ABAB /* list2.png in Resources */,
 				ED43584E2097E2BD0025543F /* Assets.xcassets in Resources */,
 				ED671CF820AFF7450076ABAB /* check.png in Resources */,
 				ED43584C2097E2BC0025543F /* Main.storyboard in Resources */,
 				ED671D0020B1702B0076ABAB /* check2.png in Resources */,
+				ED304BB920B3A346009925FC /* logo-bl.png in Resources */,
+				ED304BB720B3A077009925FC /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
