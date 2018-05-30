@@ -81,22 +81,6 @@
     return context;
 }
 
-- (IBAction)save:(id)sender {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
-    NSManagedObject *newActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activities" inManagedObjectContext:context];
-    
-    [newActivity setValue:titleTextField.text forKey:@"listname"];
-    [newActivity setValue:descTextView.text forKey:@"desc"];
-    
-    NSError *error = nil;
-    if(![context save:&error]){
-        NSLog(@"Your activity cannot be saved..%@ %@", error, [error localizedDescription]);
-    }
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (IBAction)saveBtn:(id)sender {
     NSManagedObjectContext *context = [self managedObjectContext];
     
