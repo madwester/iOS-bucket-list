@@ -47,6 +47,11 @@
     //setting the title of the home page
     self.navigationItem.title = @"Placeholder title";
     [self configureView];
+    
+    //making description label multilined
+    descLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    descLabel.numberOfLines = 0;
+
 }
 
 -(void)viewDidAppear:(BOOL)animated {
