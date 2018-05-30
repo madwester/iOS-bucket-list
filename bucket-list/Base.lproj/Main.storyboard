@@ -103,10 +103,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateTextView" destination="F77-Pg-97d" id="bIl-dX-8Im"/>
+                        <outlet property="descTextView" destination="jRU-bF-Vaf" id="Rvu-BZ-9e8"/>
+                        <outlet property="titleTextView" destination="jiT-0W-q0r" id="Bt1-id-1xE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otc-YV-OPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2376.8000000000002" y="-624.73763118440786"/>
+            <point key="canvasLocation" x="2414" y="-626"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mgn-yB-iEN">
@@ -123,7 +128,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQu-al-wlY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="-625"/>
+            <point key="canvasLocation" x="1620" y="-627"/>
         </scene>
         <!--Activity Detail View Controller-->
         <scene sceneID="x5n-rz-g8K">
@@ -223,6 +228,7 @@
                         <viewLayoutGuide key="safeArea" id="986-mh-XnV"/>
                     </view>
                     <navigationItem key="navigationItem" id="Baj-c0-2yn">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="AJh-Vl-AVp"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="pSn-k7-5iF">
                             <connections>
                                 <action selector="saveBtn:" destination="SFW-KG-qrW" id="Wqp-Vs-GAR"/>
@@ -236,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfH-r5-uhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2376.8000000000002" y="106.59670164917542"/>
+            <point key="canvasLocation" x="2415" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dkj-Cs-H2k">
@@ -253,7 +259,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujg-JZ-UQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="107"/>
+            <point key="canvasLocation" x="1620" y="107"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Qli-by-JZu">
@@ -380,12 +386,12 @@
                     <navigationItem key="navigationItem" id="6pF-2A-e2b">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="07F-Io-fHn">
                             <connections>
-                                <segue destination="SFW-KG-qrW" kind="show" id="6LX-FA-OMO"/>
+                                <segue destination="Haf-Cd-7Ru" kind="show" id="l2g-lU-3YW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="ogC-vq-OuA" kind="show" identifier="showDetail" id="jcF-w7-SEj"/>
+                        <segue destination="ogC-vq-OuA" kind="show" identifier="showDetail" id="H2d-Y2-2nj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJf-xL-sv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -400,7 +406,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1UU-MO-dez"/>
-        <segue reference="jcF-w7-SEj"/>
+        <segue reference="H2d-Y2-2nj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>

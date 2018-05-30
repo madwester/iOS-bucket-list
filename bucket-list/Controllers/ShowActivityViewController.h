@@ -11,7 +11,7 @@
 @interface ShowActivityViewController : UIViewController
 
 //creating id to be able to pass data
-@property id detailItem;
+@property (nonatomic) id detailItem;
 
 //elements from storyboard
 @property (weak, nonatomic) IBOutlet UITextView *titleTextView;

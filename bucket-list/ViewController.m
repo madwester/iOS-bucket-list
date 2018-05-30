@@ -65,11 +65,14 @@
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", [activity valueForKey:@"listname"]]];
     return cell;
 }
-/*
+
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"showDetail" sender:self];
+     [self performSegueWithIdentifier:@"showDetail" sender:self];
+
+     
+     
 }
-*/
+
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
