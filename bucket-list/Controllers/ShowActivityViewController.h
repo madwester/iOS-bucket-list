@@ -14,8 +14,9 @@
 @property (nonatomic) id detailItem;
 
 //elements from storyboard
-@property (weak, nonatomic) IBOutlet UITextView *titleTextView;
-@property (weak, nonatomic) IBOutlet UITextView *dateTextView;
-@property (weak, nonatomic) IBOutlet UITextView *descTextView;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descLabel;
 
 @end

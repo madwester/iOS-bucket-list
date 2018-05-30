@@ -15,7 +15,7 @@
 
 @implementation ShowActivityViewController
 
-@synthesize titleTextView, dateTextView, descTextView, detailItem;
+@synthesize titleLabel, dateLabel, descLabel, detailItem;
 
 - (void)setDetailItem:(id)newDetailItem {
     if (detailItem != newDetailItem) {
@@ -32,8 +32,9 @@
     // Update the user interface for the detail item.
     if (detailItem) {
         //extract element
-        [titleTextView setText:[NSString stringWithFormat:@"%@",[detailItem valueForKeyPath:@"listname"]]];
-        //self.titleTextView.text = [detailItem title];
+        //valueForKeyPath = name from database
+        [titleLabel setText:[NSString stringWithFormat:@"%@",[detailItem valueForKeyPath:@"listname"]]];
+        [descLabel setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"desc"]]];
     }
 }
 

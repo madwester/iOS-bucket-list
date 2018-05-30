@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "bucket-list/Controllers/ShowActivityViewController.m"
-            timestampString = "549350292.198874"
+            timestampString = "549358894.8763551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "bucket-list/Controllers/ShowActivityViewController.m"
-            timestampString = "549350292.198916"
+            timestampString = "549358894.8766969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "-configureView"
             landmarkType = "7">
          </BreakpointContent>
