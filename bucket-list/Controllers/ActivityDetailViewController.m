@@ -22,7 +22,6 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     
     //hide tab bar 
     self.tabBarController.tabBar.hidden = YES;
@@ -33,15 +32,14 @@
     //setting placeholder for description textview
     self.descTextView.delegate = self;
     descTextView.text = @"Description";
-    
 }
 
 //METHOD 1 OF 2 TO SET PLACEHOLDER
-- (void)textViewDidBeginEditing:(UITextView *)textView
+/*- (void)textViewDidBeginEditing:(UITextView *)textView
 {
     if ([textView.text isEqualToString:@"Description"]) {
         textView.text = @"";
-        textView.textColor = [UIColor blackColor]; //optional
+        textView.textColor = [UIColor lightGrayColor]; //optional
     }
     [textView becomeFirstResponder];
 }
@@ -51,10 +49,11 @@
 {
     if ([textView.text isEqualToString:@""]) {
         textView.text = @"Description";
-        textView.textColor = [UIColor blackColor]; //optional
+        textView.textColor = [UIColor lightGrayColor]; //optional
     }
     [textView resignFirstResponder];
 }
+*/
 
 //loads more than once, example if I need placeholders
 - (void) viewDidAppear:(BOOL)animated {
