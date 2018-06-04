@@ -86,8 +86,8 @@
     
     NSManagedObject *newActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activities" inManagedObjectContext:context];
     
-    [newActivity setValue:titleTextField.text forKey:@"listname"];
-    [newActivity setValue:descTextView.text forKey:@"desc"];
+    [newActivity setValue:titleTextField.text forKey:@"activityTitleInput"];
+    [newActivity setValue:descTextView.text forKey:@"activityDescInput"];
     
     NSError *error = nil;
     if(![context save:&error]){
