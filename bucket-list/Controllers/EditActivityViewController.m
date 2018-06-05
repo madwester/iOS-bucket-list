@@ -1,20 +1,20 @@
 //
-//  ShowActivityViewController.m
+//  EditActivityViewController.m
 //  bucket-list
 //
-//  Created by Madeleine Westerstrom on 20/5/18.
+//  Created by Madeleine Westerstrom on 5/6/18.
 //  Copyright © 2018 Madeleine Westerstrom. All rights reserved.
 //
 
-#import "ShowActivityViewController.h"
+#import "EditActivityViewController.h"
 
-@interface ShowActivityViewController ()
+@interface EditActivityViewController ()
 
 @end
 
-@implementation ShowActivityViewController
+@implementation EditActivityViewController
 
-@synthesize titleLabel, dateLabel, descLabel, detailItem;
+@synthesize editTitleTextField, editDescTextView, detailItem;
 
 - (void)setDetailItem:(id)newDetailItem {
     if (detailItem != newDetailItem) {
@@ -26,15 +26,13 @@
         [self configureView];
     }
 }
-
 - (void)configureView {
     // Update the user interface for the detail item.
     if (detailItem) {
         //extract element
         //valueForKeyPath = name from database
-        [titleLabel setText:[NSString stringWithFormat:@"%@",[detailItem valueForKeyPath:@"listname"]]];
-        [descLabel setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"desc"]]];
-        [dateLabel setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"activityDate"]]];
+        [editTitleTextField setText:[NSString stringWithFormat:@"%@",[detailItem valueForKeyPath:@"listname"]]];
+        [editDescTextView setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"desc"]]];
     }
 }
 
@@ -48,16 +46,13 @@
     self.navigationItem.title = @"Activity Detail";
     [self configureView];
     
-    //making description label multilined
-    descLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    descLabel.numberOfLines = 0;
-
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    if(self) {
+    if(self)
+    {
         [self configureView];
     }
 }
@@ -66,6 +61,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 /*
 #pragma mark - Table view data source
 
@@ -78,8 +74,9 @@
 #warning Incomplete implementation, return the number of rows
     return 0;
 }
+*/
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
@@ -123,19 +120,17 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"editBtn"]) {
-        [[segue destinationViewController] setDetailItem:detailItem];
-    }
-    
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
 
-
-- (IBAction)editBtn:(id)sender {
-    [self performSegueWithIdentifier:@"editBtn" sender:sender];
+- (IBAction)deleteBtn:(id)sender {
+    
 }
 @end

@@ -41,7 +41,11 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    //after using fetch, implement prediate. (fetch is like select all in myswl * and predicate is like select something)
+    
     NSFetchRequest *myFetch = [[NSFetchRequest alloc] initWithEntityName:@"Activities"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"completedActivity == 1 && active == 1"];
+    [myFetch setPredicate:predicate];
     
     activities = [[_appDelegate.managedObjectContext executeFetchRequest:myFetch error:nil] mutableCopy];
     
@@ -88,7 +92,7 @@
 
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *activity = self.activities[indexPath.row];
+        NSData *activity = self.activities[indexPath.row];
         [[segue destinationViewController] setDetailItem:activity];
     }
     

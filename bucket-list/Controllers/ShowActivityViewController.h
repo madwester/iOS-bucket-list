@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "EditActivityViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ShowActivityViewController : UIViewController
 
@@ -14,9 +16,10 @@
 @property (nonatomic) id detailItem;
 
 //elements from storyboard
-
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
+- (IBAction)editBtn:(id)sender;
+
 
 @end

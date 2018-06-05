@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" id="teN-rQ-0pA">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="CVF-aE-EEM">
                             <connections>
-                                <segue destination="vE6-Nu-Tdt" kind="show" id="SY8-SE-WxG"/>
+                                <action selector="editBtn:" destination="ogC-vq-OuA" id="vIf-0R-RCs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -100,6 +100,7 @@
                         <outlet property="dateLabel" destination="NED-ci-Pqa" id="xVM-Qx-D0X"/>
                         <outlet property="descLabel" destination="63B-rh-LKh" id="v1m-Cy-Yuy"/>
                         <outlet property="titleLabel" destination="g4k-gg-wCy" id="5sF-uv-IX6"/>
+                        <segue destination="vE6-Nu-Tdt" kind="show" identifier="editBtn" id="3IZ-pp-4qP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otc-YV-OPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -341,10 +342,10 @@
             </objects>
             <point key="canvasLocation" x="738" y="107"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Activity View Controller-->
         <scene sceneID="QTa-YC-IDc">
             <objects>
-                <viewController id="vE6-Nu-Tdt" sceneMemberID="viewController">
+                <viewController id="vE6-Nu-Tdt" customClass="EditActivityViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4CV-CJ-p1q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,20 +360,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZe-Us-ZO5">
-                                <rect key="frame" x="16" y="98" width="343" height="43"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YdM-8g-s3N">
+                                <rect key="frame" x="16" y="98" width="343" height="138"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="YGc-BO-kIS"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YdM-8g-s3N">
-                                <rect key="frame" x="16" y="160" width="343" height="132"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -386,6 +377,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="5"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="vE6-Nu-Tdt" eventType="touchUpInside" id="FwG-D1-uXJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbV-9N-jPl">
                                 <rect key="frame" x="16" y="439" width="343" height="38"/>
@@ -398,6 +392,15 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="5"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nut-3U-6iS">
+                                <rect key="frame" x="40" y="251" width="294" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="utF-f8-siZ"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="549855816.49220002">
+                                    <!--2018-06-05 01:43:36 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="0.89000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -405,17 +408,17 @@
                             <constraint firstItem="mA5-TF-fRT" firstAttribute="bottom" secondItem="fBS-JC-Swq" secondAttribute="bottom" constant="26" id="Ebf-Po-Xos"/>
                             <constraint firstItem="fBS-JC-Swq" firstAttribute="leading" secondItem="mA5-TF-fRT" secondAttribute="leading" constant="16" id="FRo-2h-fdU"/>
                             <constraint firstItem="2G4-up-EcP" firstAttribute="leading" secondItem="mA5-TF-fRT" secondAttribute="leading" constant="16" id="I8X-0R-zK9"/>
-                            <constraint firstItem="mA5-TF-fRT" firstAttribute="trailing" secondItem="EZe-Us-ZO5" secondAttribute="trailing" constant="16" id="PHj-al-Vmg"/>
+                            <constraint firstItem="IbV-9N-jPl" firstAttribute="top" secondItem="nut-3U-6iS" secondAttribute="bottom" constant="26" id="InH-ev-aL8"/>
+                            <constraint firstItem="nut-3U-6iS" firstAttribute="leading" secondItem="mA5-TF-fRT" secondAttribute="leading" constant="40" id="JJm-nI-2UT"/>
                             <constraint firstItem="2G4-up-EcP" firstAttribute="top" secondItem="mA5-TF-fRT" secondAttribute="top" constant="36" id="QMU-xB-UYS"/>
                             <constraint firstItem="fBS-JC-Swq" firstAttribute="top" secondItem="IbV-9N-jPl" secondAttribute="bottom" constant="13" id="Sgr-5u-v2e"/>
                             <constraint firstItem="mA5-TF-fRT" firstAttribute="trailing" secondItem="YdM-8g-s3N" secondAttribute="trailing" constant="16" id="TOl-be-8pp"/>
                             <constraint firstItem="mA5-TF-fRT" firstAttribute="trailing" secondItem="fBS-JC-Swq" secondAttribute="trailing" constant="16" id="b2K-E3-c77"/>
-                            <constraint firstItem="IbV-9N-jPl" firstAttribute="top" secondItem="YdM-8g-s3N" secondAttribute="bottom" constant="151" id="cxL-Mr-5ud"/>
-                            <constraint firstItem="YdM-8g-s3N" firstAttribute="top" secondItem="EZe-Us-ZO5" secondAttribute="bottom" constant="19" id="eIq-wm-9lL"/>
-                            <constraint firstItem="EZe-Us-ZO5" firstAttribute="leading" secondItem="mA5-TF-fRT" secondAttribute="leading" constant="16" id="eR5-tz-o4d"/>
+                            <constraint firstItem="nut-3U-6iS" firstAttribute="top" secondItem="YdM-8g-s3N" secondAttribute="bottom" constant="15" id="c2I-Lm-YdQ"/>
                             <constraint firstItem="mA5-TF-fRT" firstAttribute="trailing" secondItem="IbV-9N-jPl" secondAttribute="trailing" constant="16" id="uH1-tS-9Yb"/>
+                            <constraint firstItem="YdM-8g-s3N" firstAttribute="top" secondItem="2G4-up-EcP" secondAttribute="bottom" constant="19" id="uIa-L3-0Qe"/>
                             <constraint firstItem="YdM-8g-s3N" firstAttribute="leading" secondItem="mA5-TF-fRT" secondAttribute="leading" constant="16" id="x90-zR-HiK"/>
-                            <constraint firstItem="EZe-Us-ZO5" firstAttribute="top" secondItem="2G4-up-EcP" secondAttribute="bottom" constant="19" id="yeF-Wr-aNt"/>
+                            <constraint firstItem="mA5-TF-fRT" firstAttribute="trailing" secondItem="nut-3U-6iS" secondAttribute="trailing" constant="41" id="y41-SX-848"/>
                             <constraint firstItem="IbV-9N-jPl" firstAttribute="leading" secondItem="mA5-TF-fRT" secondAttribute="leading" constant="16" id="yvO-C5-79c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mA5-TF-fRT"/>
@@ -423,6 +426,10 @@
                     <navigationItem key="navigationItem" id="fnU-IQ-dGD">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="VCQ-WY-ntf"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editDescTextView" destination="YdM-8g-s3N" id="gCV-Sf-pkK"/>
+                        <outlet property="editTitleTextField" destination="2G4-up-EcP" id="nnQ-w9-DXN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93x-3u-Ew4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
