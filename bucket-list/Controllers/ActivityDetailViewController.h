@@ -14,8 +14,7 @@
 //initializing textfields and buttons
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descTextView;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 - (IBAction)saveBtn:(id)sender;
-
-
 
 @end

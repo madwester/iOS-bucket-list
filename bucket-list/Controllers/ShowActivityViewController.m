@@ -35,6 +35,7 @@
         //valueForKeyPath = name from database
         [titleLabel setText:[NSString stringWithFormat:@"%@",[detailItem valueForKeyPath:@"listname"]]];
         [descLabel setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"desc"]]];
+        [dateLabel setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"activityDate"]]];
     }
 }
 

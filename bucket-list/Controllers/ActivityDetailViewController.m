@@ -15,7 +15,7 @@
 
 @implementation ActivityDetailViewController
 
-@synthesize titleTextField, descTextView;
+@synthesize titleTextField, descTextView, datePicker;
 
 //only loads one
 - (void)viewDidLoad{
@@ -35,7 +35,7 @@
 }
 
 //METHOD 1 OF 2 TO SET PLACEHOLDER
-/*- (void)textViewDidBeginEditing:(UITextView *)textView
+- (void)textViewDidBeginEditing:(UITextView *)textView
 {
     if ([textView.text isEqualToString:@"Description"]) {
         textView.text = @"";
@@ -53,21 +53,17 @@
     }
     [textView resignFirstResponder];
 }
-*/
 
+/*
 //loads more than once, example if I need placeholders
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
+ */
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(IBAction)barButtonCustomPressed: (UIBarButtonItem*)btn
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (NSManagedObjectContext *) managedObjectContext {
@@ -86,8 +82,14 @@
     
     NSManagedObject *newActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activities" inManagedObjectContext:context];
     
-    [newActivity setValue:titleTextField.text forKey:@"activityTitleInput"];
-    [newActivity setValue:descTextView.text forKey:@"activityDescInput"];
+    NSDate *date = datePicker.date;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-mm-dd"];
+    NSString *stringFromDate = [formatter stringFromDate:date];
+    
+    [newActivity setValue:titleTextField.text forKey:@"listname"];
+    [newActivity setValue:descTextView.text forKey:@"desc"];
+    [newActivity setValue:stringFromDate forKey:@"activityDate"];
     
     NSError *error = nil;
     if(![context save:&error]){

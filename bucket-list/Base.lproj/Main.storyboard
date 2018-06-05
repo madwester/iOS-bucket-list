@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -118,8 +116,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJ0-XP-Np0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F5Q-Hz-wJG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5Q-Hz-wJG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                         <subviews>
                                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="E8a-WA-nRa">
                                                 <rect key="frame" x="40" y="220" width="294" height="162"/>
@@ -152,33 +150,18 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iq-w2-vsh">
-                                                <rect key="frame" x="16" y="465" width="343" height="40"/>
-                                                <color key="backgroundColor" red="0.98823529409999999" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="Z2b-O1-ZfY"/>
-                                                </constraints>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="Delete Activity"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="5"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.89000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="0iq-w2-vsh" secondAttribute="bottom" constant="76" id="1KP-55-xZu"/>
-                                            <constraint firstItem="0iq-w2-vsh" firstAttribute="leading" secondItem="F5Q-Hz-wJG" secondAttribute="leading" constant="16" id="EMl-CO-w4G"/>
                                             <constraint firstAttribute="trailing" secondItem="yiy-RE-983" secondAttribute="trailing" constant="16" id="KIg-bv-kQs"/>
                                             <constraint firstAttribute="trailing" secondItem="anj-JW-9zb" secondAttribute="trailing" constant="16" id="Pxh-dF-BB1"/>
                                             <constraint firstItem="yiy-RE-983" firstAttribute="leading" secondItem="F5Q-Hz-wJG" secondAttribute="leading" constant="16" id="VpE-8F-l0z"/>
-                                            <constraint firstItem="0iq-w2-vsh" firstAttribute="firstBaseline" secondItem="E8a-WA-nRa" secondAttribute="baseline" constant="22" symbolType="layoutAnchor" id="YNe-hN-9KC"/>
                                             <constraint firstItem="yiy-RE-983" firstAttribute="top" secondItem="anj-JW-9zb" secondAttribute="bottom" constant="16" id="Yii-o7-87M"/>
                                             <constraint firstItem="anj-JW-9zb" firstAttribute="top" secondItem="F5Q-Hz-wJG" secondAttribute="top" constant="22" id="YzS-3h-bir"/>
                                             <constraint firstItem="anj-JW-9zb" firstAttribute="top" secondItem="F5Q-Hz-wJG" secondAttribute="top" constant="15" id="a1J-gV-iif"/>
-                                            <constraint firstAttribute="trailing" secondItem="0iq-w2-vsh" secondAttribute="trailing" constant="16" id="egw-wb-jDQ"/>
                                             <constraint firstItem="anj-JW-9zb" firstAttribute="leading" secondItem="yiy-RE-983" secondAttribute="leading" id="gU5-VY-VeJ"/>
                                             <constraint firstItem="anj-JW-9zb" firstAttribute="leading" secondItem="F5Q-Hz-wJG" secondAttribute="leading" constant="16" id="gXP-Iz-IwH"/>
+                                            <constraint firstAttribute="bottom" secondItem="E8a-WA-nRa" secondAttribute="bottom" constant="221" id="hkE-E7-gXT"/>
                                             <constraint firstItem="E8a-WA-nRa" firstAttribute="centerX" secondItem="F5Q-Hz-wJG" secondAttribute="centerX" id="iGX-Q5-gX6"/>
                                             <constraint firstItem="E8a-WA-nRa" firstAttribute="top" secondItem="yiy-RE-983" secondAttribute="bottom" constant="8" symbolic="YES" id="j7i-xs-jfU"/>
                                             <constraint firstItem="anj-JW-9zb" firstAttribute="trailing" secondItem="yiy-RE-983" secondAttribute="trailing" id="wNy-qt-awI"/>
@@ -190,7 +173,6 @@
                                     <constraint firstItem="F5Q-Hz-wJG" firstAttribute="top" secondItem="LJ0-XP-Np0" secondAttribute="top" id="NLd-Jm-eQn"/>
                                     <constraint firstItem="F5Q-Hz-wJG" firstAttribute="centerX" secondItem="LJ0-XP-Np0" secondAttribute="centerX" id="Rby-JQ-e1m"/>
                                     <constraint firstItem="F5Q-Hz-wJG" firstAttribute="leading" secondItem="LJ0-XP-Np0" secondAttribute="leading" id="gp9-MR-aqZ"/>
-                                    <constraint firstItem="0iq-w2-vsh" firstAttribute="leading" secondItem="LJ0-XP-Np0" secondAttribute="leading" constant="16" id="ks3-BI-QdP"/>
                                     <constraint firstAttribute="bottom" secondItem="F5Q-Hz-wJG" secondAttribute="bottom" id="tps-9I-Bnt"/>
                                 </constraints>
                             </scrollView>
@@ -212,6 +194,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="datePicker" destination="E8a-WA-nRa" id="Lp8-1R-x3K"/>
                         <outlet property="descTextView" destination="yiy-RE-983" id="8qb-xT-7IB"/>
                         <outlet property="titleTextField" destination="anj-JW-9zb" id="2gC-Nq-f9W"/>
                     </connections>
@@ -345,7 +328,7 @@
                     <navigationItem key="navigationItem" id="6pF-2A-e2b">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="07F-Io-fHn">
                             <connections>
-                                <segue destination="SFW-KG-qrW" kind="show" id="Y5v-an-InX"/>
+                                <segue destination="SFW-KG-qrW" kind="show" id="KAL-Gh-7YJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -374,6 +357,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93x-3u-Ew4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2466" y="-593"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="phO-uj-HH6">
+            <objects>
+                <navigationController id="cgz-D2-juf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lmi-3n-v4e">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ODc-Nm-EZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="808"/>
         </scene>
     </scenes>
     <resources>
