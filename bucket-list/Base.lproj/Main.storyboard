@@ -203,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfH-r5-uhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672.8" y="106.59670164917542"/>
+            <point key="canvasLocation" x="1716" y="701"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Qli-by-JZu">
@@ -441,6 +441,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="completedBtnOutlet" destination="IbV-9N-jPl" id="Cph-YB-lNl"/>
                         <outlet property="editDatePicker" destination="nut-3U-6iS" id="IqJ-bs-5bu"/>
                         <outlet property="editDescTextView" destination="YdM-8g-s3N" id="gCV-Sf-pkK"/>
                         <outlet property="editTitleTextField" destination="2G4-up-EcP" id="nnQ-w9-DXN"/>

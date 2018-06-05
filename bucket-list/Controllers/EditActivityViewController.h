@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *editTitleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *editDescTextView;
 @property (weak, nonatomic) IBOutlet UIDatePicker *editDatePicker;
+@property (weak, nonatomic) IBOutlet UIButton *completedBtnOutlet;
 
 - (IBAction)deleteBtn:(id)sender;
 - (IBAction)completedBtn:(id)sender;

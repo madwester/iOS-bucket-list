@@ -14,7 +14,7 @@
 
 @implementation EditActivityViewController
 
-@synthesize editTitleTextField, editDescTextView, editDatePicker, detailItem;
+@synthesize editTitleTextField, editDescTextView, editDatePicker, detailItem, completedBtnOutlet;
 
 - (void)setDetailItem:(NSManagedObject *)newDetailItem {
     if (detailItem != newDetailItem) {
@@ -43,8 +43,16 @@
     self.tabBarController.tabBar.hidden = YES;
     
     //setting the title of the home page
-    self.navigationItem.title = @"Activity Detail";
+    //self.navigationItem.title = @"Activity Detail";
     [self configureView];
+    
+    //enabling button if current activity already is completed
+    if([detailItem valueForKey:@"completedActivity"]) {
+        completedBtnOutlet.hidden = YES;
+    }
+    else{
+        completedBtnOutlet.hidden = NO;
+    }
     
 }
 
