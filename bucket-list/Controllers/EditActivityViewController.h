@@ -7,15 +7,18 @@
 //
 
 #import "ViewController.h"
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @interface EditActivityViewController : UIViewController
 
 //creating id to be able to pass data
-@property (nonatomic) id detailItem;
+@property (strong, nonatomic) NSManagedObject *detailItem;
 @property (weak, nonatomic) IBOutlet UITextField *editTitleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *editDescTextView;
 
 - (IBAction)deleteBtn:(id)sender;
+- (IBAction)completedBtn:(id)sender;
 
 
 @end

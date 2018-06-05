@@ -16,14 +16,14 @@
 
 @synthesize titleLabel, dateLabel, descLabel, detailItem;
 
-- (void)setDetailItem:(id)newDetailItem {
+- (void)setDetailItem:(NSManagedObject *)newDetailItem {
     if (detailItem != newDetailItem) {
         
         //recieve the point to element
         detailItem = newDetailItem;
         NSLog(@"%@", [detailItem description]);
         // Update the view.
-        [self configureView];
+        //[self configureView];
     }
 }
 

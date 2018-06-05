@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "ActivityDetailViewController.h" //edit activity page
+#import "ShowActivityViewController.h" //show acticity page
 @import CoreData;
 
 @interface ViewController : UITableViewController

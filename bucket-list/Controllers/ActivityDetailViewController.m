@@ -91,8 +91,8 @@
     [newActivity setValue:titleTextField.text forKey:@"listname"];
     [newActivity setValue:descTextView.text forKey:@"desc"];
     [newActivity setValue:stringFromDate forKey:@"activityDate"];
-    [newActivity setValue:0 forKey:@"active"];
-    [newActivity setValue:0 forKey:@"completedActivity"];
+    [newActivity setValue:[NSNumber numberWithBool:YES] forKey:@"active"];
+    [newActivity setValue:[NSNumber numberWithBool:YES] forKey:@"completedActivity"];
     
     NSError *error = nil;
     if(![context save:&error]){

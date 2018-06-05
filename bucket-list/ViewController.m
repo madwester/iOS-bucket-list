@@ -7,9 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "ActivityDetailViewController.h" //edit activity page
-#import "ShowActivityViewController.h" //show acticity page
-
 
 @interface ViewController ()
 
@@ -44,7 +41,7 @@
     //after using fetch, implement prediate. (fetch is like select all in myswl * and predicate is like select something)
     
     NSFetchRequest *myFetch = [[NSFetchRequest alloc] initWithEntityName:@"Activities"];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"completedActivity == 1 && active == 1"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat: @"completedActivity = YES && active = YES"];
     [myFetch setPredicate:predicate];
     
     activities = [[_appDelegate.managedObjectContext executeFetchRequest:myFetch error:nil] mutableCopy];
@@ -72,7 +69,6 @@
 
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
      [self performSegueWithIdentifier:@"showDetail" sender:self];
-
 }
 
 
