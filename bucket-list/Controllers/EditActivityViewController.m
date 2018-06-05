@@ -14,7 +14,7 @@
 
 @implementation EditActivityViewController
 
-@synthesize editTitleTextField, editDescTextView, detailItem;
+@synthesize editTitleTextField, editDescTextView, editDatePicker, detailItem;
 
 - (void)setDetailItem:(NSManagedObject *)newDetailItem {
     if (detailItem != newDetailItem) {
@@ -82,6 +82,8 @@
     if(![context save:&error]){
         NSLog(@"Your activity cannot be saved..%@ %@", error, [error localizedDescription]);
     }
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)deleteBtn:(id)sender {
@@ -93,9 +95,30 @@
     if(![context save:&error]){
         NSLog(@"Your activity cannot be deleted..%@ %@", error, [error localizedDescription]);
     }
-
     
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (IBAction)saveEditBtn:(id)sender {
+    
+    //formatting the date from datepicker to a string
+    NSDate *date = editDatePicker.date;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *stringFromDate = [formatter stringFromDate:date];
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    [detailItem setValue:editTitleTextField.text forKey:@"listname"];
+    [detailItem setValue:editDescTextView.text forKey:@"desc"];
+    [detailItem setValue:stringFromDate forKey:@"activityDate"];
+    
+    NSError *error = nil;
+    if(![context save:&error]){
+        NSLog(@"Your activity cannot be updated..%@ %@", error, [error localizedDescription]);
+    }
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 @end
+

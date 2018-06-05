@@ -16,9 +16,10 @@
 @property (strong, nonatomic) NSManagedObject *detailItem;
 @property (weak, nonatomic) IBOutlet UITextField *editTitleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *editDescTextView;
+@property (weak, nonatomic) IBOutlet UIDatePicker *editDatePicker;
 
 - (IBAction)deleteBtn:(id)sender;
 - (IBAction)completedBtn:(id)sender;
-
+- (IBAction)saveEditBtn:(id)sender;
 
 @end
