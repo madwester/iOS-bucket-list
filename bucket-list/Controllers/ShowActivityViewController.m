@@ -46,7 +46,7 @@
     self.tabBarController.tabBar.hidden = YES;
     
     //setting the title of the home page
-    self.navigationItem.title = @"Placeholder title";
+    self.navigationItem.title = @"listname";
     [self configureView];
     
     //making description label multilined
