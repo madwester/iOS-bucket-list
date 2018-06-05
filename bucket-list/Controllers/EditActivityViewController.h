@@ -18,9 +18,11 @@
 @property (weak, nonatomic) IBOutlet UITextView *editDescTextView;
 @property (weak, nonatomic) IBOutlet UIDatePicker *editDatePicker;
 @property (weak, nonatomic) IBOutlet UIButton *completedBtnOutlet;
+@property (weak, nonatomic) IBOutlet UIButton *plannedBtnOutlet;
 
 - (IBAction)deleteBtn:(id)sender;
-- (IBAction)completedBtn:(id)sender;
 - (IBAction)saveEditBtn:(id)sender;
+- (IBAction)completedBtn:(id)sender;
+- (IBAction)plannedBtn:(id)sender;
 
 @end

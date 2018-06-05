@@ -14,7 +14,7 @@
 
 @implementation EditActivityViewController
 
-@synthesize editTitleTextField, editDescTextView, editDatePicker, detailItem, completedBtnOutlet;
+@synthesize editTitleTextField, editDescTextView, editDatePicker, detailItem, completedBtnOutlet, plannedBtnOutlet;
 
 - (void)setDetailItem:(NSManagedObject *)newDetailItem {
     if (detailItem != newDetailItem) {
@@ -49,9 +49,11 @@
     //enabling button if current activity already is completed
     if([detailItem valueForKey:@"completedActivity"]) {
         completedBtnOutlet.hidden = YES;
+        plannedBtnOutlet.hidden = NO;
     }
     else{
         completedBtnOutlet.hidden = NO;
+        plannedBtnOutlet.hidden = YES;
     }
     
 }
@@ -85,6 +87,19 @@
     
     NSManagedObjectContext *context = [self managedObjectContext];
     [detailItem setValue:[NSNumber numberWithBool:NO] forKey:@"completedActivity"];
+    
+    NSError *error = nil;
+    if(![context save:&error]){
+        NSLog(@"Your activity cannot be saved..%@ %@", error, [error localizedDescription]);
+    }
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)plannedBtn:(id)sender {
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    [detailItem setValue:[NSNumber numberWithBool:YES] forKey:@"completedActivity"];
     
     NSError *error = nil;
     if(![context save:&error]){
