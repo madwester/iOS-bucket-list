@@ -14,7 +14,7 @@
 
 @implementation ShowActivityViewController
 
-@synthesize titleLabel, dateLabel, descLabel, detailItem;
+@synthesize titleLabel, dateLabel, descLabel, detailItem, titleLabelTop;
 
 - (void)setDetailItem:(NSManagedObject *)newDetailItem {
     if (detailItem != newDetailItem) {
@@ -48,9 +48,18 @@
     //self.navigationItem.title = @"Activity Detail";
     [self configureView];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     //making description label multilined
     descLabel.lineBreakMode = NSLineBreakByWordWrapping;
     descLabel.numberOfLines = 0;
+    
+    CALayer *bottomBorder = [CALayer layer];
+    bottomBorder.borderColor = [UIColor blackColor].CGColor;
+    bottomBorder.borderWidth = 1;
+    bottomBorder.frame = CGRectMake(0, CGRectGetHeight(titleLabelTop.frame)-1, CGRectGetWidth(titleLabelTop.frame), 1);
+    titleLabelTop.clipsToBounds = YES;
+    [titleLabelTop.layer addSublayer:bottomBorder];
 
 }
 

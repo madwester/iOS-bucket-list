@@ -14,40 +14,56 @@
         <scene sceneID="nim-JT-Rlc">
             <objects>
                 <viewController id="ogC-vq-OuA" customClass="ShowActivityViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="sIO-ty-KDC">
+                    <view key="view" contentMode="scaleToFill" id="sIO-ty-KDC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wjy-77-DKB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjy-77-DKB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xCV-om-Lhz">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCV-om-Lhz">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4k-gg-wCy">
-                                                <rect key="frame" x="16" y="36" width="343" height="43"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NED-ci-Pqa">
+                                                <rect key="frame" x="16" y="78" width="343" height="43"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="ets-7J-OcY"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Date has not been added">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4k-gg-wCy">
+                                                <rect key="frame" x="16" y="38" width="343" height="43"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="43" id="hco-RM-JDU"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Title has not been added">
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="system" size="17"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="10" tighteningFactorForTruncation="0.0"/>
+                                                            <font key="NSFont" size="21" name="Caveat-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63B-rh-LKh">
-                                                <rect key="frame" x="16" y="160" width="343" height="43"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63B-rh-LKh">
+                                                <rect key="frame" x="16" y="129" width="343" height="20.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Description has not been added">
                                                         <attributes>
                                                             <font key="NSFont" metaFont="system" size="17"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="10" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="10" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -56,32 +72,16 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="5"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NED-ci-Pqa">
-                                                <rect key="frame" x="16" y="98" width="343" height="43"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="43" id="ets-7J-OcY"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Date has not been added">
-                                                        <attributes>
-                                                            <font key="NSFont" metaFont="system" size="17"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="10" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.89000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.97647058823529409" green="0.9882352941176471" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="g4k-gg-wCy" firstAttribute="top" secondItem="xCV-om-Lhz" secondAttribute="top" constant="36" id="2Yc-08-FZe"/>
-                                            <constraint firstAttribute="trailing" secondItem="g4k-gg-wCy" secondAttribute="trailing" constant="16" id="CpI-4E-BQH"/>
                                             <constraint firstAttribute="trailing" secondItem="63B-rh-LKh" secondAttribute="trailing" constant="16" id="DJR-BR-ydP"/>
+                                            <constraint firstItem="g4k-gg-wCy" firstAttribute="top" secondItem="xCV-om-Lhz" secondAttribute="top" constant="38" id="PLo-qg-n3S"/>
                                             <constraint firstItem="63B-rh-LKh" firstAttribute="top" secondItem="NED-ci-Pqa" secondAttribute="bottom" constant="19" id="Qfs-zT-HJm"/>
                                             <constraint firstAttribute="trailing" secondItem="NED-ci-Pqa" secondAttribute="trailing" constant="16" id="dUN-69-45q"/>
-                                            <constraint firstItem="g4k-gg-wCy" firstAttribute="leading" secondItem="xCV-om-Lhz" secondAttribute="leading" constant="16" id="qRV-Dn-phk"/>
-                                            <constraint firstItem="NED-ci-Pqa" firstAttribute="top" secondItem="g4k-gg-wCy" secondAttribute="bottom" constant="19" id="wj3-lJ-8as"/>
+                                            <constraint firstAttribute="trailing" secondItem="g4k-gg-wCy" secondAttribute="trailing" constant="16" id="dlh-zY-dUX"/>
+                                            <constraint firstItem="g4k-gg-wCy" firstAttribute="leading" secondItem="xCV-om-Lhz" secondAttribute="leading" constant="16" id="iIc-EE-FAe"/>
+                                            <constraint firstItem="NED-ci-Pqa" firstAttribute="top" secondItem="g4k-gg-wCy" secondAttribute="bottom" constant="19" id="l44-Ha-Lr5"/>
                                             <constraint firstItem="63B-rh-LKh" firstAttribute="leading" secondItem="xCV-om-Lhz" secondAttribute="leading" constant="16" id="wlg-cQ-G2t"/>
                                             <constraint firstItem="NED-ci-Pqa" firstAttribute="leading" secondItem="xCV-om-Lhz" secondAttribute="leading" constant="16" id="yjg-90-6v3"/>
                                         </constraints>
@@ -117,7 +117,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="NED-ci-Pqa" id="xVM-Qx-D0X"/>
                         <outlet property="descLabel" destination="63B-rh-LKh" id="v1m-Cy-Yuy"/>
-                        <outlet property="titleLabel" destination="g4k-gg-wCy" id="5sF-uv-IX6"/>
+                        <outlet property="titleLabel" destination="g4k-gg-wCy" id="ycD-dk-nP3"/>
                         <segue destination="vE6-Nu-Tdt" kind="show" identifier="editBtn" id="3IZ-pp-4qP"/>
                     </connections>
                 </viewController>

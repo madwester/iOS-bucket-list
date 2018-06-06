@@ -21,5 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 - (IBAction)editBtn:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabelTop;
+
 
 @end
