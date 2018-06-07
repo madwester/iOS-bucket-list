@@ -14,26 +14,25 @@
 
 @implementation ShowActivityViewController
 
-@synthesize titleLabel, dateLabel, descLabel, detailItem, titleLabelTop;
+@synthesize titleLabel, descTextView, dateLabel, detailItem;
+
 
 - (void)setDetailItem:(NSManagedObject *)newDetailItem {
     if (detailItem != newDetailItem) {
-        
         //recieve the point to element
         detailItem = newDetailItem;
         NSLog(@"%@", [detailItem description]);
-        // Update the view.
-        //[self configureView];
     }
 }
 
 - (void)configureView {
+    
     // Update the user interface for the detail item.
     if (detailItem) {
         //extract element
         //valueForKeyPath = name from database
-        [titleLabel setText:[NSString stringWithFormat:@"%@",[detailItem valueForKeyPath:@"listname"]]];
-        [descLabel setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"desc"]]];
+        [titleLabel setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"listname"]]];
+        [descTextView setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"desc"]]];
         [dateLabel setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"activityDate"]]];
     }
 }
@@ -41,34 +40,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [descTextView setUserInteractionEnabled:NO];
+    
     //hide tab bar
     self.tabBarController.tabBar.hidden = YES;
     
     //setting the title of the home page
     //self.navigationItem.title = @"Activity Detail";
     [self configureView];
-    
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    //making description label multilined
-    descLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    descLabel.numberOfLines = 0;
-    
+
+    /*
+    border-bottom on label
     CALayer *bottomBorder = [CALayer layer];
     bottomBorder.borderColor = [UIColor blackColor].CGColor;
     bottomBorder.borderWidth = 1;
     bottomBorder.frame = CGRectMake(0, CGRectGetHeight(titleLabelTop.frame)-1, CGRectGetWidth(titleLabelTop.frame), 1);
     titleLabelTop.clipsToBounds = YES;
     [titleLabelTop.layer addSublayer:bottomBorder];
+    */
 
+    
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
     if(self) {
         [self configureView];
     }
+    //making description label multilined
+    //descLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    //descLabel.numberOfLines = 0;
+    //[descLabel sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning {

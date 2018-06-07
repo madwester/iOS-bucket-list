@@ -16,12 +16,12 @@
 @property (strong, nonatomic) NSManagedObject *detailItem;
 
 //elements from storyboard
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *descLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+
+@property (weak, nonatomic) IBOutlet UITextView *descTextView;
+
 - (IBAction)editBtn:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UILabel *titleLabelTop;
-
 
 @end

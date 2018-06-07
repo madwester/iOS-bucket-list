@@ -39,7 +39,7 @@
 {
     if ([textView.text isEqualToString:@"Description"]) {
         textView.text = @"";
-        textView.textColor = [UIColor lightGrayColor]; //optional
+        textView.textColor = [UIColor blackColor]; //optional
     }
     [textView becomeFirstResponder];
 }
@@ -49,7 +49,7 @@
 {
     if ([textView.text isEqualToString:@""]) {
         textView.text = @"Description";
-        textView.textColor = [UIColor lightGrayColor]; //optional
+        textView.textColor = [UIColor blackColor]; //optional
     }
     [textView resignFirstResponder];
 }

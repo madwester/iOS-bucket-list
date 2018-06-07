@@ -34,6 +34,16 @@
         [editTitleTextField setText:[NSString stringWithFormat:@"%@",[detailItem valueForKeyPath:@"listname"]]];
         [editDescTextView setText:[NSString stringWithFormat:@"%@", [detailItem valueForKeyPath:@"desc"]]];
     }
+    
+    //enabling button if current activity already is completed
+    if([[NSString stringWithFormat:@"%@",[detailItem valueForKey:@"completedActivity"]]  isEqual: @"1"]) {
+        completedBtnOutlet.hidden = NO;
+        plannedBtnOutlet.hidden = YES;
+    }
+    else{
+        completedBtnOutlet.hidden = YES;
+        plannedBtnOutlet.hidden = NO;
+    }
 }
 
 - (void)viewDidLoad {
@@ -45,17 +55,6 @@
     //setting the title of the home page
     //self.navigationItem.title = @"Activity Detail";
     [self configureView];
-    
-    //enabling button if current activity already is completed
-    if([detailItem valueForKey:@"completedActivity"]) {
-        completedBtnOutlet.hidden = YES;
-        plannedBtnOutlet.hidden = NO;
-    }
-    else{
-        completedBtnOutlet.hidden = NO;
-        plannedBtnOutlet.hidden = YES;
-    }
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
