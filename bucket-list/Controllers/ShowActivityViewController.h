@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSManagedObject *detailItem;
 
 //elements from storyboard
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UITextView *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 

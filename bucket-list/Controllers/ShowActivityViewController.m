@@ -40,8 +40,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [titleLabel setUserInteractionEnabled:NO];
     [descTextView setUserInteractionEnabled:NO];
-    
+    [dateLabel setUserInteractionEnabled:NO];
+
     //hide tab bar
     self.tabBarController.tabBar.hidden = YES;
     
