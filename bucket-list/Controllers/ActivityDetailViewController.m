@@ -31,7 +31,8 @@
     
     //setting placeholder for description textview
     self.descTextView.delegate = self;
-    descTextView.text = @"Description";
+    descTextView.text = @"Add your Description";
+    descTextView.textColor = [UIColor lightGrayColor];
     
     //adding padding to textfield
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
@@ -42,7 +43,7 @@
 //METHOD 1 OF 2 TO SET PLACEHOLDER
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    if ([textView.text isEqualToString:@"Description"]) {
+    if ([textView.text isEqualToString:@"Add your Description"]) {
         textView.text = @"";
         textView.textColor = [UIColor blackColor]; //optional
     }
@@ -53,7 +54,7 @@
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     if ([textView.text isEqualToString:@""]) {
-        textView.text = @"Description";
+        textView.text = @"Add your Description";
         textView.textColor = [UIColor blackColor]; //optional
     }
     [textView resignFirstResponder];

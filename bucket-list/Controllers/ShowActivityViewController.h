@@ -17,10 +17,10 @@
 
 //elements from storyboard
 @property (weak, nonatomic) IBOutlet UITextView *dateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
-
+@property (weak, nonatomic) IBOutlet UITextView *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descTextView;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleActivity;
 
 - (IBAction)editBtn:(id)sender;
 

@@ -14,7 +14,7 @@
 
 @implementation ShowActivityViewController
 
-@synthesize titleLabel, descTextView, dateLabel, detailItem;
+@synthesize titleLabel, descTextView, dateLabel, detailItem, titleActivity;
 
 
 - (void)setDetailItem:(NSManagedObject *)newDetailItem {
@@ -60,8 +60,6 @@
     titleLabelTop.clipsToBounds = YES;
     [titleLabelTop.layer addSublayer:bottomBorder];
     */
-
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
