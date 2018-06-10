@@ -52,6 +52,11 @@
     //hide tab bar
     self.tabBarController.tabBar.hidden = YES;
     
+    //adding padding to textfield
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
+    editTitleTextField.leftView = paddingView;
+    editTitleTextField.leftViewMode = UITextFieldViewModeAlways;
+    
     //setting the title of the home page
     //self.navigationItem.title = @"Activity Detail";
     [self configureView];

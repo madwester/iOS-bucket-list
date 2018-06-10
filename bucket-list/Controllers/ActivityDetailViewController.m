@@ -32,6 +32,11 @@
     //setting placeholder for description textview
     self.descTextView.delegate = self;
     descTextView.text = @"Description";
+    
+    //adding padding to textfield
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
+    titleTextField.leftView = paddingView;
+    titleTextField.leftViewMode = UITextFieldViewModeAlways;
 }
 
 //METHOD 1 OF 2 TO SET PLACEHOLDER
