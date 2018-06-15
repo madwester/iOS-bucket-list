@@ -71,7 +71,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//managing the object og
 - (NSManagedObjectContext *) managedObjectContext {
     NSManagedObjectContext *context = nil;
     
@@ -82,10 +82,11 @@
     }
     return context;
 }
-
+//actions for save button
 - (IBAction)saveBtn:(id)sender {
     NSManagedObjectContext *context = [self managedObjectContext];
     
+    //wrapping activity into an objecy
     NSManagedObject *newActivity = [NSEntityDescription insertNewObjectForEntityForName:@"Activities" inManagedObjectContext:context];
     
     //formatting the date from datepicker to a string
@@ -94,6 +95,7 @@
     [formatter setDateFormat:@"yyyy-MM-dd"];
     NSString *stringFromDate = [formatter stringFromDate:date];
     
+    //setting values of activity into db
     [newActivity setValue:titleTextField.text forKey:@"listname"];
     [newActivity setValue:descTextView.text forKey:@"desc"];
     [newActivity setValue:stringFromDate forKey:@"activityDate"];
@@ -104,7 +106,7 @@
     if(![context save:&error]){
         NSLog(@"Your activity cannot be saved..%@ %@", error, [error localizedDescription]);
     }
-    
+    //redirecting user
     [self.navigationController popViewControllerAnimated:YES];
 }
 

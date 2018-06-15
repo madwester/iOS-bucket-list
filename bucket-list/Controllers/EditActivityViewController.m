@@ -16,6 +16,7 @@
 
 @synthesize editTitleTextField, editDescTextView, editDatePicker, detailItem, completedBtnOutlet, plannedBtnOutlet;
 
+//creating a new item so we can handle each one
 - (void)setDetailItem:(NSManagedObject *)newDetailItem {
     if (detailItem != newDetailItem) {
         
@@ -75,7 +76,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//managing the object
 - (NSManagedObjectContext *) managedObjectContext {
     NSManagedObjectContext *context = nil;
     
@@ -86,9 +87,9 @@
     }
     return context;
 }
-
+//actions of complete btn
 - (IBAction)completedBtn:(id)sender {
-    
+    //setting the activity to complete instead of planned
     NSManagedObjectContext *context = [self managedObjectContext];
     [detailItem setValue:[NSNumber numberWithBool:NO] forKey:@"completedActivity"];
     
@@ -99,9 +100,9 @@
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
-
+//actions of planned btn
 - (IBAction)plannedBtn:(id)sender {
-    
+    //setting the activity to planned instead of complete
     NSManagedObjectContext *context = [self managedObjectContext];
     [detailItem setValue:[NSNumber numberWithBool:YES] forKey:@"completedActivity"];
     
@@ -109,12 +110,12 @@
     if(![context save:&error]){
         NSLog(@"Your activity cannot be saved..%@ %@", error, [error localizedDescription]);
     }
-    
+    //redirecting user
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
-
+//actions of delete btn
 - (IBAction)deleteBtn:(id)sender {
-    
+    //not deleting from db, we only change the state so it won't be displayed anymore
     NSManagedObjectContext *context = [self managedObjectContext];
     [detailItem setValue:[NSNumber numberWithBool:NO] forKey:@"active"];
     
@@ -134,6 +135,7 @@
     [formatter setDateFormat:@"yyyy-MM-dd"];
     NSString *stringFromDate = [formatter stringFromDate:date];
     
+    //setting the new values into db after editing the activity
     NSManagedObjectContext *context = [self managedObjectContext];
     [detailItem setValue:editTitleTextField.text forKey:@"listname"];
     [detailItem setValue:editDescTextView.text forKey:@"desc"];
@@ -143,7 +145,7 @@
     if(![context save:&error]){
         NSLog(@"Your activity cannot be updated..%@ %@", error, [error localizedDescription]);
     }
-    
+    //redirecting user
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

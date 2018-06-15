@@ -38,13 +38,16 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    //after using fetch, implement prediate. (fetch is like select all in myswl * and predicate is like select something)
+    //fetching activities from local database
     NSFetchRequest *myFetch = [[NSFetchRequest alloc] initWithEntityName:@"Activities"];
+    
+    //filtering away deleted and planned activities
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"completedActivity = NO && active = YES"];
     [myFetch setPredicate:predicate];
     
     activities = [[_appDelegate.managedObjectContext executeFetchRequest:myFetch error:nil] mutableCopy];
     
+    //reloading table view
     [self.tableView reloadData];
 }
 
@@ -54,25 +57,29 @@
     return 1;
 }
 
+//returning as many rows as exisiting activities
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return activities.count;
 }
 
-
+//setting up each activity as a label
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellIdentifier = @"CompleteActivityCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
+    //wrapping each activity into a object
     NSManagedObject *activity = [activities objectAtIndex:indexPath.row];
     //setting the text to show in list
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", [activity valueForKey:@"listname"]]];
     return cell;
 }
 
+//setting up clickevent when clicking on activity
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 
+//managing object
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];
@@ -83,9 +90,8 @@
 }
 
 #pragma mark - Segues
-
+//passing data of acticity into next screen
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //to do to pass data, to show correct activity
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSData *activity = self.activities[indexPath.row];

@@ -26,6 +26,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
     //show tab bar
     self.tabBarController.tabBar.hidden = NO;
 }
@@ -38,8 +39,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    //after using fetch, implement prediate. (fetch is like select all in myswl * and predicate is like select something)
-    
+    //fetching activity so we can show them on screen if they are completed and active (not deleted)
     NSFetchRequest *myFetch = [[NSFetchRequest alloc] initWithEntityName:@"Activities"];
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"completedActivity = YES && active = YES"];
     [myFetch setPredicate:predicate];
@@ -48,11 +48,11 @@
     
     [self.tableView reloadData];
 }
-
+//setting up table view
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
-
+//setting up each activity row
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return activities.count;
 }
@@ -66,7 +66,7 @@
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", [activity valueForKey:@"listname"]]];
     return cell;
 }
-
+//setting up identifier show detail
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
      [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
@@ -82,10 +82,8 @@
 }
 
 #pragma mark - Segues
-
+//padding data to next screen when clicked on activity
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //to do to pass data, to show correct activity
-
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSData *activity = self.activities[indexPath.row];

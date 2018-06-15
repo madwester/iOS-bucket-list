@@ -16,7 +16,7 @@
 
 @synthesize titleLabel, descTextView, dateLabel, detailItem, titleActivity;
 
-
+//creating a new item so we can handle each one
 - (void)setDetailItem:(NSManagedObject *)newDetailItem {
     if (detailItem != newDetailItem) {
         //recieve the point to element
@@ -40,6 +40,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //setting the labels uneditable
     [titleLabel setUserInteractionEnabled:NO];
     [descTextView setUserInteractionEnabled:NO];
     [dateLabel setUserInteractionEnabled:NO];
@@ -51,15 +52,6 @@
     //self.navigationItem.title = @"Activity Detail";
     [self configureView];
 
-    /*
-    border-bottom on label
-    CALayer *bottomBorder = [CALayer layer];
-    bottomBorder.borderColor = [UIColor blackColor].CGColor;
-    bottomBorder.borderWidth = 1;
-    bottomBorder.frame = CGRectMake(0, CGRectGetHeight(titleLabelTop.frame)-1, CGRectGetWidth(titleLabelTop.frame), 1);
-    titleLabelTop.clipsToBounds = YES;
-    [titleLabelTop.layer addSublayer:bottomBorder];
-    */
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -67,10 +59,6 @@
     if(self) {
         [self configureView];
     }
-    //making description label multilined
-    //descLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    //descLabel.numberOfLines = 0;
-    //[descLabel sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +75,7 @@
     }
     
 }
-
+//actions of edit btn
 - (IBAction)editBtn:(id)sender {
     [self performSegueWithIdentifier:@"editBtn" sender:sender];
 }
